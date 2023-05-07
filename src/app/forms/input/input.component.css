@@ -1,0 +1,14 @@
+.header {
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.error>p {
+  font-size: 12px;
+  color: red;
+  margin: 2px;
+}
+
+.error {
+  margin-top: 5px;
+}

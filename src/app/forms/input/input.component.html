@@ -1,0 +1,11 @@
+<h4 class="ui header">{{label}}</h4>
+    <div class="ui fluid input" [ngClass]="{error: onError()}">
+      <input [formControl]="control" [mask]="mask"  />
+    </div>
+    <div *ngIf="onError()" class="error">
+      <p *ngIf="control.errors?.['required']">Nie podano żadnej wartości</p>
+      <p *ngIf="control.errors?.['pattern']">{{patternMsg}}</p>
+      <p *ngIf="control.errors?.['maxlength']">Za dużo znaków, podałeś {{control.errors?.['maxlength'].actualLength}} znaki a powinieneś podać nie więcej niż {{control.errors?.['maxlength'].requiredLength}}</p>
+      <p *ngIf="control.errors?.['minlength']">Za mało znaków, podałeś {{control.errors?.['minlength'].actualLength}} znaki a powinieneś podać conajmniej {{control.errors?.['minlength'].requiredLength}}</p> 
+    </div> 
+

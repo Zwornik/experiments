@@ -1,0 +1,129 @@
+.card {
+  height: 250px !important;
+  width: 400px !important;
+  min-width: 400px !important;
+  border-radius: 14px;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  background-image: radial-gradient(
+    circle at calc(40%) calc(100% + 565%),
+    rgb(0, 0, 0) 84%,
+    rgb(76, 76, 141) 90%,
+    rgb(38, 38, 121) 5%
+  );
+  background-position: center;
+  background-origin: padding-box;
+  box-shadow: 10px 10px 10px rgb(109, 109, 109);
+}
+
+
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: antiquewhite;
+  height: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  position: relative;
+  display: inline-block;
+  color: antiquewhite;
+  letter-spacing: .07rem;
+}
+
+h4 {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.05rem;
+  color: rgb(189, 163, 130);
+}
+
+.circle {
+  position: relative;
+  top: -20px;
+  left: 260px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(226, 51, 32);
+  box-shadow: 0px 0px 15px rgb(255, 117, 102);
+  border-radius: 25px;
+}
+
+.bank {
+  position: relative;
+  top: 20px;
+  left: 38px;
+}
+
+.cardNo {
+  position: relative;
+  display: block;
+  top: 15px;
+  width: 100%;
+  height: 22px;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px black;
+  letter-spacing: 0.25rem;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.name {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 22px;
+  top: 22px;
+  left: 10px;
+  text-align: left;
+  letter-spacing: 0.1rem;
+}
+
+.holder {
+  position: relative;
+  display: block;
+  top: -3px;
+  left: 10px;
+}
+
+.subtitle {
+  position: relative;
+  bottom: 0px;
+  width: 100px;
+  margin-left: 10px;
+  text-align: right;
+
+}
+
+.sub-numbers {
+  position: relative;
+  bottom: 0px;
+  left: 10px;
+  width: 50px;
+  margin-right: 0px;
+  text-align: left;
+}
+
+.spacer {
+  position: relative;
+  bottom: 0px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.line {
+  position: relative;
+  bottom: 35px;
+  left: 25px;
+  width: 500px;
+}

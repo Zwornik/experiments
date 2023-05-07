@@ -1,0 +1,57 @@
+<div class="ui container segment">
+
+  <app-title>Podaj dane karty</app-title>
+
+  <div class="ui stackable grid">
+    <div class="ten wide column card-div">
+      <app-card class="card" [cardNumber]="cardNoVal" [surname]="nameVal" [expiry]="expiryVal"
+        [securityCode]="securityCodeVal"></app-card>
+    </div>
+
+    <div class="six wide column">
+
+      <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+
+        <app-input label="Imię i nazwisko" [control]="cardForm.controls.surname"
+          patternMsg="Imię i nazwisko to dwa wyrazy w alfabecie łacińskim"></app-input>
+
+        <app-input label="Numer karty" [control]="cardForm.controls.cardNo" mask="0000-0000-0000-0000"></app-input>
+
+        <div class="ui grid">
+          <div class="eight wide column">
+            <app-input label="Data ważności" [control]="cardForm.controls.expiry" mask="00/00"
+              patternMsg="Podaj datę w formacie MM/RR. Liczba miesięcy nie może być większa od 12, a liczba roku musi zawierać się w przedziale od 23 do 29."></app-input>
+          </div>
+          <div class="eight wide column">
+            <app-input label="Kod bezpieczeństwa" [control]="cardForm.controls.securityCode"
+              patternMsg="Kod może zawierać tylko cyfry"></app-input>
+          </div>
+        </div>
+        <div class="ui grid">
+          <button class="ui primary button" [ngClass]="{disabled: cardForm.invalid}">Wyślij</button>
+          <button class="ui negative basic button" type="button" (click)="onReset()">Anuluj</button>
+        </div>
+
+        <div class="ui success message">
+          <p>Każdy <strong>Input</strong> wraz z tytułem i informacjami o błędach to ten sam powtarzalny komponent.</p>
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <app-title></app-title>
+  <div class="ui success message">
+    <p>Walidację stworzyłem używając klasy Validators.</p>
+    <p>Pola <strong>numer karty</strong> i <strong>data ważności</strong> korzystają z pakietu <strong>ngx-mask</strong>
+      do maskowania wprowadzanych wartości.</p>
+    <p>Dodatkowo, stworzyłem własną wersję klasy <strong>FormControl</strong>, która zamienia wprowadzany tekst na
+      UpperCase w polu z nazwiskiem.</p>
+  </div>
+
+
+  <!-- <div> VALUE {{ cardForm.controls.surname.value | json }} </div>
+  <div>{{ cardForm.valid | json }}</div>
+  <div>{{ cardForm.controls.securityCode.errors | json }}</div>
+  <div>REQUIRED {{cardForm.controls.surname.errors?.['required']}}</div> -->

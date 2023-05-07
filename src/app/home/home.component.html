@@ -1,0 +1,73 @@
+
+<div class="ui container segment">
+  <app-title>Ta strona nie ma być piękna.</app-title>
+  <p>
+    Jej zadaniem jest prezentacja moich aktualnych umiejętności w Angularze. Jest ona też
+    polem doświadczalnym w czasie mojej nauki.
+  </p>
+
+  <div class="ui success message">
+    <p>Tym kolorem wyjaśniam techniczne aspekty niektórych elementów, <br>
+      np. to że wszystkie tytuły to ten sam komponent typu widget. </p>
+  </div>
+</div>
+
+<div class="ui container segment">
+  <app-title>Trochę historii</app-title>
+  <p>
+    Po 17 latach pracy jako architekt postanowiłem zmienić zawód i powrócić do tego co mnie zawsze fascynowało czyli do
+    programowania.
+  </p>
+  <p>
+    Najpierw, na początku lat 90-tych, były odważne próby programowania w Basic'u na Atari 65XL.
+  </p>
+  <p>
+    Potem w latach 2002 – 2003 zafascynowany możliwościami Flasha stworzyłem kilka stron internetowych pokazanych
+    poniżej.
+  </p>
+  <p>
+    W późniejszych latach zrobiłem też kilka stron w WordPresie, ale niestety nie zachowały się do dzisiaj.</p>
+    <p>W roku 2010 zaprojektowałem stronę własnej pracowni architektonicznej. Strony nie ma już w sieci, ale został
+      projekt graficzny.
+    </p>
+    
+    <div class="ui success message">
+      <p>Każdy z poniższych elementów to powtarzany komponent.</p>
+      <p>
+        Dimmer, przeglądanie obrazków i wyświetlanie video zrobione jest tylko w Angularze bez użycia pluginów. </p>
+    </div>
+
+  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [link]="safeUrl" [end]="end"></app-modal>
+
+  <div class="ui divider"></div>
+
+  <app-item (click)="toggleModal('./assets/images/'+foto[1])" class="first">
+    <img src="./assets/images/formidea1_icon.jpg" alt="Design strony mojej firmy">
+    <header>Strona mojej firmy Formidea Archiktci</header>
+    <span>Firma działała w latach 2010-2014</span>
+    Mój projekt graficzny i funkcjonalny został oprogramowany przez zewnętrzną firmę.
+  </app-item>
+
+  <app-item (click)="toggleModal('lv0X7Ztc3Mg')">
+    <img src="./assets/images/stu.jpg" alt="Mockup strony teatru Scena Stu w Krakowie">
+    <header>Strona teatru "Scena Stu" w Krakowie</header>
+    <span>Zrobiona w 2003 roku </span>
+    Mockup tej strony, stał się podstawą działającej przez 10 lat witryny teatru.
+  </app-item>
+
+  <app-item (click)="toggleModal('-tholS-63Rw')">
+    <img src="./assets/images/bajo.jpg" alt="Strona firmy bajo zrobina we Flashu">
+    <header>Strona firmy Bajo</header>
+    <span>Zrobiona we Flashu w 2002 roku</span>
+    Obecna strona firmy Bajo <a href="https://www.bajo.eu" target="_blank">https://www.bajo.eu</a>
+  </app-item>
+
+  <app-item (click)="toggleModal('Q1AGhviYgEE')">
+    <img src="./assets/images/kloc.jpg" alt="Strona portfolio zrobiona we Flashu">
+    <header>Portfolio we Flashu</header>
+    <span>Zrobiona w 2003 roku</span>
+  </app-item>
+
+
+
+</div>

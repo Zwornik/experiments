@@ -1,0 +1,17 @@
+.button {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.card-div {
+  position: relative;
+  max-height: 450px;
+  min-height: 270px;
+  /* border: 3px solid black; */
+}
+
+.card {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
