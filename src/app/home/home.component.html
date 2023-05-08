@@ -1,9 +1,9 @@
-
 <div class="ui container segment">
   <app-title>Ta strona nie ma być piękna.</app-title>
   <p>
-    Jej zadaniem jest prezentacja moich aktualnych umiejętności w Angularze. Jest ona też
-    polem doświadczalnym w czasie mojej nauki. Moje pozostałe projekty można obejżeć tutaj <a href="https://github.com/Zwornik" target="_blank">https://github.com/Zwornik</a>
+    Jej zadaniem jest prezentacja moich aktualnych umiejętności w Angularze. Stylizacje pozostawiłem Semantic Ui.<br>
+    Srtona ta jest też polem doświadczalnym w czasie mojej nauki. <br>Moje pozostałe projekty można obejżeć tutaj <a
+      href="https://github.com/Zwornik" target="_blank">https://github.com/Zwornik</a>
   </p>
 
   <div class="ui success message">
@@ -14,28 +14,34 @@
 
 <div class="ui container segment">
   <app-title>Trochę historii</app-title>
-  <p>
-    Po 17 latach pracy jako architekt postanowiłem zmienić zawód i powrócić do tego co mnie zawsze fascynowało czyli do
-    programowania.
-  </p>
-  <p>
-    Najpierw, na początku lat 90-tych, były odważne próby programowania w Basic'u na Atari 65XL.
-  </p>
-  <p>
-    Potem w latach 2002 – 2003 zafascynowany możliwościami Flasha stworzyłem kilka stron internetowych pokazanych
-    poniżej.
-  </p>
-  <p>
-    W późniejszych latach zrobiłem też kilka stron w WordPresie, ale niestety nie zachowały się do dzisiaj.</p>
-    <p>W roku 2010 zaprojektowałem stronę własnej pracowni architektonicznej. Strony nie ma już w sieci, ale został
+  <div class="ui bulleted list">
+    <p class="item">
+      Po 17 latach pracy jako architekt postanowiłem zmienić zawód i powrócić do tego co mnie zawsze fascynowało czyli
+      do
+      programowania.
+    </p>
+    <p class="item">
+      Najpierw, na początku lat 90-tych, były odważne próby programowania w Basic'u na Atari 65XL.
+    </p>
+    <p class="item">
+      Potem w latach 2002 – 2003 zafascynowany możliwościami Flasha stworzyłem kilka stron internetowych pokazanych
+      poniżej.
+    </p>
+    <p class="item">
+      W późniejszych latach zrobiłem też kilka stron w WordPresie, ale niestety nie zachowały się do dzisiaj.</p>
+    <p class="item">
+      W roku 2010 zaprojektowałem stronę własnej pracowni architektonicznej. Strony nie ma już w sieci, ale został
       projekt graficzny.
     </p>
-    
-    <div class="ui success message">
-      <p>Każdy z poniższych elementów to powtarzany komponent.</p>
-      <p>
-        Dimmer, przeglądanie obrazków i wyświetlanie video zrobione jest tylko w Angularze bez użycia pluginów. </p>
-    </div>
+    <p class="item">
+      Zanim zacząłem moją przygodę z Angularem pilnie uczyłem się Pythona. Niektóre projekty, które wtedy powstały można
+      zobaczyć w zakładce Python.</p>
+  </div>
+
+  <div class="ui success message">
+    <p>Każdy z poniższych elementów to powtarzany komponent.<br>
+      Dimmer, przeglądanie obrazków i wyświetlanie video zrobione jest tylko w Angularze bez użycia pluginów. </p>
+  </div>
 
   <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [pictLink]="safeUrl" [end]="end"></app-modal>
 

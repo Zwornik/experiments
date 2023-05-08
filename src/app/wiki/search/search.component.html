@@ -1,0 +1,10 @@
+<form (submit)="onSearch($event)">
+  <div class="ui equal width stackable grid">
+    <div class="ui input column">
+      <input (input)="term=$any($event).target.value">
+    </div>
+    <div class="ui column">
+      <button class="ui button primary">Szukaj</button>
+    </div>
+  </div>
+</form>

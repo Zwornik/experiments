@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./forms/forms.module').then((m) => m.FormsModule),
   },
+  {
+    path: 'wiki',
+    loadChildren: () => import('./wiki/wiki.module').then((m) => m.WikiModule),
+  },
 ];
 
 @NgModule({

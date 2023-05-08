@@ -13,6 +13,10 @@ iframe {
   height: 100%;
 }
 
+.ui.header {
+  text-align: center;
+}
+
 .image{
   /* position: relative; 
   width: 1041px !important;
