@@ -3,7 +3,7 @@
   <app-title>Ta strona nie ma być piękna.</app-title>
   <p>
     Jej zadaniem jest prezentacja moich aktualnych umiejętności w Angularze. Jest ona też
-    polem doświadczalnym w czasie mojej nauki.
+    polem doświadczalnym w czasie mojej nauki. Moje pozostałe projekty można obejżeć tutaj <a href="https://github.com/Zwornik" target="_blank">https://github.com/Zwornik</a>
   </p>
 
   <div class="ui success message">
@@ -37,11 +37,11 @@
         Dimmer, przeglądanie obrazków i wyświetlanie video zrobione jest tylko w Angularze bez użycia pluginów. </p>
     </div>
 
-  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [link]="safeUrl" [end]="end"></app-modal>
+  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [pictLink]="safeUrl" [end]="end"></app-modal>
 
   <div class="ui divider"></div>
 
-  <app-item (click)="toggleModal('./assets/images/'+foto[1])" class="first">
+  <app-item (click)="toggleModal('./assets/images/formidea/'+foto[1])" class="first">
     <img src="./assets/images/formidea1_icon.jpg" alt="Design strony mojej firmy">
     <header>Strona mojej firmy Formidea Archiktci</header>
     <span>Firma działała w latach 2010-2014</span>

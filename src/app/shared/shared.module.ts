@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TitleComponent } from './title/title.component';
 import { ItemComponent } from './item/item.component';
 import { SlidesComponent } from './slides/slides.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 
@@ -11,6 +12,7 @@ import { SlidesComponent } from './slides/slides.component';
     TitleComponent,
     ItemComponent,
     SlidesComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { SlidesComponent } from './slides/slides.component';
     TitleComponent,
     ItemComponent,
     SlidesComponent,
+    ModalComponent,
   ]
 })
 export class SharedModule { }

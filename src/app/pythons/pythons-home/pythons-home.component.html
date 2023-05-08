@@ -1,0 +1,35 @@
+<div class="ui container segment">
+
+  <app-title>Phyton projects</app-title>
+
+
+  <p>Oto moje niektóre projekty w Pythonie, które zrobiłem zanim zacząłem się uczyć Angulara. </p>
+
+  <div class="ui message success">Każdy z poniższych elementów to powtarzany komponent.</div>
+
+  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('', '')" end="jpg" [pictLink]="pictLink"
+    [description]="repoLink"></app-modal>
+
+  <app-title></app-title>
+
+
+  <app-item
+    (click)="toggleModal('./assets/images/oxGame/'+oxGame[1], 'https://github.com/Zwornik/TicTacToe-Game-in-Python')"
+    class="first">
+    <img src="./assets/images/ox2_icon.jpg" alt="Design strony mojej firmy">
+    <header>Gra w kółko i krzyżyk</header>
+    <span><a href="https://github.com/Zwornik/TicTacToe-Game-in-Python"
+        target="_blank">https://github.com/Zwornik/TicTacToe-Game-in-Python</a></span>
+    Jestem również dumny z logiki tego programu która nie pozwoli Ci wygrać, bez względu na to kto rozpoczyna partię.
+    Repozytorium znajdziesz tutaj.
+  </app-item>
+
+  <app-item (click)="toggleModal('./assets/images/vending/', 'https://github.com/Zwornik/2205_Vending_Machine_OOP' )"
+    class="first">
+    <img src="./assets/images/ox2_icon.jpg" alt="Design strony mojej firmy">
+    <header>Automat do sprzedaży słodyczy</header>
+    <span><a href="https://github.com/Zwornik/2205_Vending_Machine_OOP"
+        target="_blank">https://github.com/Zwornik/2205_Vending_Machine_OOP</a></span>
+    To jest program, na którym poznawałem zasady OOP. Jest to sumulacja automatu do sprzedaży słodyczy, która zarządza
+    zapasami gotówki i asortymentu.
+  </app-item>

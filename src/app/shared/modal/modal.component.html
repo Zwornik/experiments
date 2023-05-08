@@ -2,13 +2,14 @@
   <div class="ui basic modal" [ngClass]="{active: seeModal}">
 
     <div class="film" *ngIf="end != 'jpg'">
-      <iframe width="1792" height="1280" *ngIf="seeModal" [src]="link" title="YouTube video player" frameborder="0"
+      <iframe width="1792" height="1280" *ngIf="seeModal" [src]="pictLink" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
 
-  </div>
-  <div *ngIf="end == 'jpg'">
-    <app-slides [link]="link"></app-slides>
+    <div *ngIf="end == 'jpg'">
+      <app-slides [link]="pictLink"></app-slides>
+    </div>
+    <div class="content"><a href="javascript:void(0);" (click)="openLink(description)">{{description}}</a></div>
   </div>
 </div>

@@ -15,8 +15,10 @@ import {
 })
 export class ModalComponent implements OnInit {
   @Input() seeModal = false;
-  @Input() link = '';
+  @Input() pictLink = '';
   @Input() end = '';
+  @Input() description = '';
+
 
 
 constructor(private el:ElementRef){};
@@ -30,5 +32,9 @@ constructor(private el:ElementRef){};
 
   onClick() {
     this.myClick.emit();
+  }
+
+  openLink(url: string){
+    window.open(url, '_blank');
   }
 }
