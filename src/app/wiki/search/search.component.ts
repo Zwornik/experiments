@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
-import { WikiService } from '../wiki.service';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent {
-result: any;
-  term ='';
-constructor( private wiki:WikiService){};
+  @Output() submitedEvent = new EventEmitter();
+  @Output() languageEvent = new EventEmitter();
+  term = '';
 
-  onSearch(event: any){
-    event.preventDefault();
-    this.wiki.search(this.term).subscribe((response: any) => {this.result = response.query.search; })
-    console.log(this.result)
+
+  onSearch(event: any) {
+    if(event != 0) {
+    event.preventDefault();}
+    this.submitedEvent.emit(this.term);
+  }
+
+  onLanguageChange(event: any) {
+    this.languageEvent.emit(event.target.value)
+    console.log("SEARCH", event.target.value)
   }
 }

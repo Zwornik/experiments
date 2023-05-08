@@ -1,10 +1,29 @@
 <form (submit)="onSearch($event)">
+
   <div class="ui equal width stackable grid">
-    <div class="ui input column">
-      <input (input)="term=$any($event).target.value">
-    </div>
     <div class="ui column">
-      <button class="ui button primary">Szukaj</button>
+      <div class="ui input">
+        <input (input)="term=$any($event).target.value">
+      </div>
+    </div>
+
+    <div class="ui column">
+
+      <div class="ui container equal width center aligned padded stackable grid">
+        <div class="ui column">
+          <select (change)="onLanguageChange($event)" class="ui selection dropdown">
+            <option class="item" value="pl">Polski</option>
+            <option class="item" value="en">English</option>
+            <option class="item" value="sq">Shqip (Albański)</option>
+          </select>
+        </div>
+
+        <div class="ui column">
+          <button class="ui button primary column">Szukaj</button>
+        </div>
+
+      </div>
     </div>
   </div>
 </form>
+

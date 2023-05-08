@@ -1,0 +1,8 @@
+.row:hover {
+background-color: #e9f4ff;
+cursor: pointer;
+}
+
+.searchmatch {
+  font-weight: bold;
+}

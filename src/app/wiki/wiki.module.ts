@@ -5,7 +5,6 @@ import { WikiRoutingModule } from './wiki-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { WikiService } from './wiki.service';
 
-import { AppComponent } from '../app.component';
 import { WikiHomeComponent } from './wiki-home/wiki-home.component';
 import { SearchComponent } from './search/search.component';
 import { DisplayComponent } from './display/display.component';

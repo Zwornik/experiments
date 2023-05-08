@@ -1,1 +1,16 @@
-<p>display works!</p>
+<table *ngIf="results.length" class="ui orange celled table">
+  <thead>
+    <tr>
+      <th>Wytuł</th>
+      <th>Ilość słów</th>
+      <th>Wycinek</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="openWiki(item.pageid)" class="row" *ngFor="let item of results">
+      <td><a>{{item.title}}</a></td>
+      <td>{{item.wordcount}}</td>
+      <td [innerHTML]="item.snippet"></td>
+    </tr>
+  </tbody>
+</table>
