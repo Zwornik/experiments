@@ -10,9 +10,9 @@ export class LinkService {
   videoUrl = '';
 
   getVideoUrl(link: string): SafeResourceUrl {
-    if (link.slice(-3) != 'jpg') {
+    if (link.slice(-1) != '/') {  //if youtube link
       this.videoUrl = `https://www.youtube.com/embed/${link}`;
-    } else {
+    } else {  //if links to folder with pictures
       this.videoUrl = link;
     }
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);

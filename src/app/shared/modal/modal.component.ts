@@ -15,8 +15,8 @@ import {
 })
 export class ModalComponent implements OnInit {
   @Input() seeModal = false;
-  @Input() pictLink = '';
-  @Input() end = '';
+  @Input() link: any = '';
+  @Input() modalType = '';
   @Input() description = '';
 
 
@@ -25,6 +25,7 @@ constructor(private el:ElementRef){};
   
   ngOnInit(): void {
     document.body.appendChild(this.el.nativeElement)
+    console.log(this.modalType)
   }
   ngOnDestroy() {this.el.nativeElement.remove()}
 
@@ -37,4 +38,5 @@ constructor(private el:ElementRef){};
   openLink(url: string){
     window.open(url, '_blank');
   }
+
 }

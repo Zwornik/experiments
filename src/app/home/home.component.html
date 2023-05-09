@@ -43,11 +43,11 @@
       Dimmer, przeglądanie obrazków i wyświetlanie video zrobione jest tylko w Angularze bez użycia pluginów. </p>
   </div>
 
-  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [pictLink]="safeUrl" [end]="end"></app-modal>
+  <app-modal [seeModal]="seeModal" (myClick)="toggleModal('')" [link]="safeData" [modalType]="modalType"></app-modal>
 
   <div class="ui divider"></div>
 
-  <app-item (click)="toggleModal('./assets/images/formidea/'+foto[1])" class="first">
+  <app-item (click)="toggleModal(picts.formidea)" class="first">
     <img src="./assets/images/formidea1_icon.jpg" alt="Design strony mojej firmy">
     <header>Strona mojej firmy Formidea Architekci</header>
     <span>Firma działała w latach 2010-2014</span>

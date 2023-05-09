@@ -1,4 +1,15 @@
 <div class="ui ">
   <img class="ui image" [src]="link">
-  <!-- <div class="arrow-right" style="background-color: aqua;"></div> -->
+
+  <div class="arrow-bg left" (click)="leftClick($event)">
+    <div class="arrow left" >
+      <img src="./assets/images/arrow-left.png" alt="">
+    </div>
+  </div>
+
+  <div class="arrow-bg right" (click)="rightClick($event)">
+    <div class="arrow right" >
+      <img src="./assets/images/arrow-right.png" alt="">
+    </div>
+  </div>
 </div>

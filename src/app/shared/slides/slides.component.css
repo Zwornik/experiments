@@ -1,7 +1,14 @@
-.arrow-right {
-  widows: 100px;
-  height: 100px;
-  background-color: aqua;
+.arrow.left {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0%, -70%);
+}
+.arrow.right {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(0%, -70%);
 }
 
 .image {
@@ -9,4 +16,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
+}
+
+.arrow-bg {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  /* border: 3px solid red; */
+}
+
+.arrow-bg:hover {
+  opacity: .80;
+}
+
+.arrow-bg.right {
+  right: 0;
 }

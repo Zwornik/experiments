@@ -1,15 +1,17 @@
 <div class="ui dimmer" [ngClass]="{active: seeModal}" (click)="onClick()">
   <div class="ui basic modal" [ngClass]="{active: seeModal}">
 
-    <div class="film" *ngIf="end != 'jpg'">
-      <iframe width="1792" height="1280" *ngIf="seeModal" [src]="pictLink" title="YouTube video player" frameborder="0"
+    <div class="film" *ngIf="modalType == 'film'">
+        <iframe width="1792" height="1280" [src]="link" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+      
     </div>
 
-    <div *ngIf="end == 'jpg'">
-      <app-slides [link]="pictLink"></app-slides>
+    <div *ngIf="modalType == 'image'">
+      <app-slides [pictList]="link"></app-slides> {{link}}
     </div>
     <h4 class="ui header "><a href="javascript:void(0);" (click)="openLink(description)">{{description}}</a></h4>
-  </div>
+  
+  </div> 
 </div>

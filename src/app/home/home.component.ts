@@ -1,38 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LinkService } from '../link.service';
+import { PicturesService } from '../pictures.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+
+  constructor(private linkService: LinkService, private picturesService: PicturesService) {}
+
+  ngOnInit(): void {
+    this.picts = this.picturesService.getPicts()
+  }
+
   seeModal = false;
-  safeUrl: any;
-  end = '';
-  foto = [
-    'formidea1.jpg',
-    'formidea2.jpg',
-    'formidea3.jpg',
-    'formidea4.jpg',
-    'formidea5.jpg',
-  ];
+  safeData: any;
+  modalType= '';
+  picts: any;
   body: any = document.getElementsByTagName('body')[0];
 
-  constructor(private linkService: LinkService) {}
 
-  toggleModal(link: string) {
+  toggleModal(link: string | string[]) {
     this.seeModal = !this.seeModal;
-    if(link.slice(-1) != "/"){  //external link
-      this.safeUrl = this.linkService.getVideoUrl(link);
-    } else {
-      this.safeUrl = link;   //link to folder with pictures
-    }
+    if(typeof link == 'string') {
+      this.safeData = this.linkService.getVideoUrl(link);
+      this.modalType= 'film'}
+    else {
+      this.safeData = link
+      this.modalType= 'image';}
 
     if (this.seeModal) {
-      this.body.style.overflow = 'hidden';  //scroll disalowed
+      this.body.style.overflow = 'hidden'; //scroll disalowed
     } else {
-      this.body.style.overflow = 'auto';   //scroll allowed
+      this.body.style.overflow = 'auto'; //scroll allowed
     }
+    
   }
 }
+
