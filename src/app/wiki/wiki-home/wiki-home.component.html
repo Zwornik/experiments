@@ -5,7 +5,7 @@
   Wystarczy wybrać inny język z menu, żeby wyniki dla wpisanego hasła się odświeżyły.
 <app-search (submitedEvent)="setTerm($event)" (languageEvent)="setLanguage($event)"></app-search>
 
-<div class="ui message success">Powyższy komponent emituje 2 zdarzenia przy zmianie języka i naciśnięciu Wyślij, które uruchamiają dwie metody w głównym komponencie tej strony, co z kolei uruchamia serwis, uzyskujący dane z API Wikipedii. </div>
+<div class="ui message success">Powyższy komponent emituje 2 zdarzenia przy zmianie języka i naciśnięciu Wyślij, które uruchamiają dwie metody w głównym komponencie tej strony. Każda z nich może uruchomić z kolei serwis, uzyskujący dane z API Wikipedii.</div>
 
 <app-display [results]="results" [language]="language"></app-display>
 </div>

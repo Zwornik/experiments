@@ -18,6 +18,13 @@ const routes: Routes = [
     path: 'wiki',
     loadChildren: () => import('./wiki/wiki.module').then((m) => m.WikiModule),
   },
+  {
+    path: 'expts',
+    loadChildren: () =>
+      import('./experiments/experiments.module').then(
+        (m) => m.ExperimentsModule
+      ),
+  },
 ];
 
 @NgModule({

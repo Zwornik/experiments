@@ -1,0 +1,16 @@
+<div class="ui container segment">
+  <app-title>Subcomponents Routing</app-title>
+  <div class="ui success message">
+    <p>Rezem z wyborem którejkolwiek z poniższych zakładek zmienia się adres URL w przeglądarce.</p>
+  </div>
+  <app-tabs></app-tabs>
+</div>
+
+<div class="ui container segment">
+  <app-title>Komunikacja dziecko -> rodzic</app-title>
+  <div class="ui success message">
+    <p>Poniższa zawartość tworzona jest automatycznie na podstawie ilości danych przekazywanych w tabeli z komponentu nadrzędnego. </p>
+  </div>
+  <app-accord [data]="accordItems"></app-accord>
+</div>
+<p></p><br>

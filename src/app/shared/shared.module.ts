@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { TitleComponent } from './title/title.component';
 import { ItemComponent } from './item/item.component';
 import { SlidesComponent } from './slides/slides.component';
 import { ModalComponent } from './modal/modal.component';
+import { TabComponent } from './tab/tab.component';
 
 
 
@@ -13,6 +15,7 @@ import { ModalComponent } from './modal/modal.component';
     ItemComponent,
     SlidesComponent,
     ModalComponent,
+    TabComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +25,7 @@ import { ModalComponent } from './modal/modal.component';
     ItemComponent,
     SlidesComponent,
     ModalComponent,
+    TabComponent,
   ]
 })
 export class SharedModule { }

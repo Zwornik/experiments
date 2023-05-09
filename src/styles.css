@@ -21,3 +21,27 @@
 .searchmatch {
   font-weight: bold;
 }
+
+#tab-image {
+  position: relative;
+  /* top: 60%; */
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-height: 200px;
+  max-width: 200px;
+}
+
+#tab-text {
+font-weight: bold;
+  text-align: center;
+  cursor: default;
+  color: black;
+}
+
+#tab-text:hover {
+    background-color: #b5cc18;
+  }
+
+#descr {
+  background-color: #b5cc18;
+}

@@ -23,13 +23,16 @@ export class HomeComponent {
 
   toggleModal(link: string) {
     this.seeModal = !this.seeModal;
-    this.safeUrl = this.linkService.getVideoUrl(link);
-    this.end = link.slice(-3);
+    if(link.slice(-1) != "/"){  //external link
+      this.safeUrl = this.linkService.getVideoUrl(link);
+    } else {
+      this.safeUrl = link;   //link to folder with pictures
+    }
 
     if (this.seeModal) {
-      this.body.style.overflow = 'hidden';
+      this.body.style.overflow = 'hidden';  //scroll disalowed
     } else {
-      this.body.style.overflow = 'auto';
+      this.body.style.overflow = 'auto';   //scroll allowed
     }
   }
 }

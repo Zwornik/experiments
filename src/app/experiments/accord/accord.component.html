@@ -1,0 +1,11 @@
+<div class="ui styled accordion">
+  <div *ngFor="let item of data; let i = index">
+  <div class="title" [ngClass]="{active: selected==i}" (click)="selected=i">
+    <i class="dropdown icon"></i>
+    {{item.title}}
+  </div>
+  <div class="content" [ngClass]="{active: selected==i}">
+    <p class="transition visible" style="display: block !important;">{{item.content}}</p>
+  </div>
+</div>
+</div>
