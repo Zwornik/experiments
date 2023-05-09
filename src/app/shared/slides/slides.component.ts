@@ -13,7 +13,7 @@ export class SlidesComponent implements OnInit {
 
   ngOnInit(): void {
     this.link = `./assets/images/${this.pictList[0]}/${this.pictList[1]}`;
-    console.log("SLIDES LINK", this.link)
+    console.log('SLIDES LINK', this.link);
   }
 
   constructor(private linkService: LinkService) {}
@@ -31,7 +31,7 @@ export class SlidesComponent implements OnInit {
     if (this.currentPict < this.pictList.length - 1) {
       this.currentPict += 1;
       this.createLink();
-    }
+    } 
   }
 
   createLink() {
@@ -42,11 +42,13 @@ export class SlidesComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.code === 'ArrowLeft') {  // left arrow on keyboard
+    if (event.code === 'ArrowLeft') {
+      // left arrow on keyboard
       this.leftClick(event);
-      console.log("ARROW")
+      console.log('ARROW');
     }
-    if (event.code === 'ArrowRight') { //right arrow on keyboard
+    if (event.code === 'ArrowRight') {
+      //right arrow on keyboard
       this.rightClick(event);
     }
   }

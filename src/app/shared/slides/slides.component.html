@@ -1,14 +1,14 @@
 <div class="ui ">
   <img class="ui image" [src]="link">
 
-  <div class="arrow-bg left" (click)="leftClick($event)">
-    <div class="arrow left" >
+  <div class="arrow-bg left" [ngClass]="{hide: currentPict <= 1}" (click)="leftClick($event)">
+    <div class="arrow left">
       <img src="./assets/images/arrow-left.png" alt="">
     </div>
   </div>
 
-  <div class="arrow-bg right" (click)="rightClick($event)">
-    <div class="arrow right" >
+  <div class="arrow-bg right" [ngClass]="{hide: currentPict >= pictList.length - 1}" (click)="rightClick($event)">
+    <div class="arrow right">
       <img src="./assets/images/arrow-right.png" alt="">
     </div>
   </div>

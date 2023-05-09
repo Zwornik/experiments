@@ -35,3 +35,7 @@
 .arrow-bg.right {
   right: 0;
 }
+
+.hide {
+  visibility: hidden;
+}
