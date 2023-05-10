@@ -1,5 +1,5 @@
 <div class="ui ">
-  <img class="ui image" [src]="link">
+  <img class="ui image" [src]="link" (click)="stopPropagation($event)">
 
   <div class="arrow-bg left" [ngClass]="{hide: currentPict <= 1}" (click)="leftClick($event)">
     <div class="arrow left">

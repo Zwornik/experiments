@@ -52,4 +52,8 @@ export class SlidesComponent implements OnInit {
       this.rightClick(event);
     }
   }
+
+  stopPropagation(event: Event){
+    event.stopPropagation()
+  }
 }
